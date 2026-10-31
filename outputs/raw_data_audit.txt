@@ -1,0 +1,82 @@
+
+============================================================
+CUSTOMERS: shape = (1200, 5)
+
+Data types:
+customer_id    str
+city           str
+signup_date    str
+age            str
+gender         str
+dtype: object
+
+Missing-value audit:
+customer_id: 0 missing (0.00%)
+city: 0 missing (0.00%)
+signup_date: 0 missing (0.00%)
+age: 61 missing (5.08%)
+gender: 30 missing (2.50%)
+
+============================================================
+PRODUCTS: shape = (40, 4)
+
+Data types:
+product_id      str
+product_name    str
+category        str
+price_inr       str
+dtype: object
+
+Missing-value audit:
+product_id: 0 missing (0.00%)
+product_name: 0 missing (0.00%)
+category: 0 missing (0.00%)
+price_inr: 0 missing (0.00%)
+
+============================================================
+ORDERS: shape = (13084, 9)
+
+Data types:
+order_id            str
+customer_id         str
+product_id          str
+quantity            str
+order_ts            str
+status              str
+discount_pct        str
+order_amount        str
+delivery_minutes    str
+dtype: object
+
+Missing-value audit:
+order_id: 0 missing (0.00%)
+customer_id: 0 missing (0.00%)
+product_id: 0 missing (0.00%)
+quantity: 0 missing (0.00%)
+order_ts: 0 missing (0.00%)
+status: 0 missing (0.00%)
+discount_pct: 0 missing (0.00%)
+order_amount: 0 missing (0.00%)
+delivery_minutes: 2541 missing (19.42%)
+
+============================================================
+ORDER AUDIT CHECKPOINTS
+Raw order rows: 13084
+Exact duplicate rows: 119
+Duplicate order IDs: 775
+Pending rows: 656
+Distinct order IDs: 12309
+Blank amounts: 0
+Invalid non-blank amounts: 120
+Negative amounts: 0
+Blank delivery times: 2541
+Invalid non-blank delivery times: 0
+Negative delivery times: 106
+
+CUSTOMER AUDIT CHECKPOINTS
+Blank ages: 61
+Invalid non-blank ages: 0
+Ages outside 10-100: 6
+Distinct raw city spellings: 18
+Distinct non-blank raw gender spellings: 10
+Blank genders: 30

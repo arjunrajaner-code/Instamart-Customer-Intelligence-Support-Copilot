@@ -1,0 +1,27 @@
+[
+  {
+    "order_id": "ORD-999999",
+    "decision": "NOT_FOUND",
+    "reason": "Order ID was not found.",
+    "refund_inr": 0.0
+  },
+  {
+    "order_id": "ORD-110227",
+    "customer_id": "C0986",
+    "delivery_minutes": 49.0,
+    "delivery_date": "2025-07-13",
+    "request_date": "2025-07-16",
+    "days_after_delivery": 3,
+    "decision": "AUTO_APPROVAL",
+    "reason": "Eligible for a full refund; amount is up to INR 1000 and the 7-day condition is satisfied.",
+    "refund_inr": 75.6
+  },
+  {
+    "order_id": "ORD-110227",
+    "customer_id": "C0986",
+    "delivery_minutes": 49.0,
+    "decision": "DENIED",
+    "reason": "Refund request was raised more than 7 days after delivery.",
+    "refund_inr": 0.0
+  }
+]

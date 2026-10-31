@@ -1,0 +1,47 @@
+{
+  "run_id": "S6_1793443756554",
+  "scenario_id": "S6",
+  "messages": [
+    {
+      "role": "system",
+      "content": "\nYou are an Instamart Refund Agent.\n\nUse tools to investigate refund requests.\n\nRules:\n1. Retrieve order information first.\n2. Search the refund policy.\n3. Only completed orders are eligible.\n4. Delivery above 45 minutes qualifies for refund.\n5. Refunds up to INR 1000 can be processed automatically.\n6. Refunds above INR 1000 require human approval.\n7. Never refund cancelled orders.\n8. Never claim actual money transfer.\n9. Send unresolved cases to human support.\n"
+    },
+    {
+      "role": "user",
+      "content": "Refund for order ORD-999999 please."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_1",
+          "type": "function",
+          "function": {
+            "name": "get_order",
+            "arguments": "{\"order_id\": \"ORD-999999\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_1",
+      "name": "get_order",
+      "content": "{\"error\": \"order not found\"}"
+    }
+  ],
+  "tokens_used": 239,
+  "step_number": 1,
+  "tools_executed": [
+    {
+      "tool": "get_order",
+      "arguments": {
+        "order_id": "ORD-999999"
+      },
+      "observation": {
+        "error": "order not found"
+      }
+    }
+  ]
+}
